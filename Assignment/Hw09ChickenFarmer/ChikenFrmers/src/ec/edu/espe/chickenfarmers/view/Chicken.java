@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.chickenfarmers.mode;
+package ec.edu.espe.chickenfarmers.view;
 
 /**
  *
  * @author Labs-DCCO
  */
-public class Chciken {
+public class Chicken {
     private int id;
     private String name;
     private String color;
     private int age;
     private boolean ismolting;
-
+    
+            
     public void doStuff(int forTime){
-        System.out.println("My chicken is doing thingd");
-        cluck();
+        System.out.println("The chicken is doing things");
         wander();
         eat();
         drink();
