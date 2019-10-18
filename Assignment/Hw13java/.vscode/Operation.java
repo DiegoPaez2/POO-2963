@@ -35,4 +35,52 @@ public class Operation {
         System.out.println("La division es:"+division); 
     }
 
+    public int getNum1() {
+        return num1;
+    }
+
+    public void setNum1(int num1) {
+        this.num1 = num1;
+    }
+
+    public int getNum2() {
+        return num2;
+    }
+
+    public void setNum2(int num2) {
+        this.num2 = num2;
+    }
+
+    public int getSum() {
+        return sum;
+    }
+
+    public void setSum(int sum) {
+        this.sum = sum;
+    }
+
+    public int getSubtraction() {
+        return subtraction;
+    }
+
+    public void setSubtraction(int subtraction) {
+        this.subtraction = subtraction;
+    }
+
+    public int getMultiplication() {
+        return multiplication;
+    }
+
+    public void setMultiplication(int multiplication) {
+        this.multiplication = multiplication;
+    }
+
+    public int getDivision() {
+        return division;
+    }
+
+    public void setDivision(int division) {
+        this.division = division;
+    }
+
 }
