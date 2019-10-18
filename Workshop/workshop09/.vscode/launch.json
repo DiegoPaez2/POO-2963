@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Mian",
+            "request": "launch",
+            "mainClass": "Mian",
+            "projectName": "workshop09_ec948673"
+        }
+    ]
+}
