@@ -1,8 +1,8 @@
-public class Person{
-
-    private String name;
-    private int age;
-    private int ope1;
+import java.util.ArrayList;
+import java.util.Scanner;
+public class verificador{
+  
+  private int ope1;
   private int ope2;
   private int ope3;
   private int ope4;
@@ -16,12 +16,13 @@ public class Person{
   int respuesta =0;
   int contador=0;
   boolean aux = false;
-    
-    public Person(String name, int age, int idn){
+
+  public String leer() {
+    System.out.println("Ingrese la cedula");
     Scanner entrada = new Scanner(System.in);
-    String idn = entrada.nextLine();
-    int num = idn.length();
-    String[] vector = idn.split("");
+    String cadena = entrada.nextLine();
+    int num = cadena.length();
+    String[] vector = cadena.split("");
     int dig1 = Integer.parseInt(vector[0]);
     int dig2 = Integer.parseInt(vector[1]);
     int dig3 = Integer.parseInt(vector[2]);
@@ -32,7 +33,7 @@ public class Person{
     int dig8 = Integer.parseInt(vector[7]);
     int dig9 = Integer.parseInt(vector[8]);
     int digverificador = Integer.parseInt(vector[9]);
-    int numero = idn.length();
+    int numero = cadena.length();
     
     if( numero == 10){
           ope1 = dig1 *2;
@@ -77,7 +78,7 @@ public class Person{
             if (respuesta == digverificador){
               aux = true;
               System.out.println("cedula correcta");
-              
+              return cadena;
             }else{
               aux = false;
               System.out.println("cedula incorrecta");
@@ -87,7 +88,7 @@ public class Person{
             if( respuesta == dig9){
               aux = true;
               System.out.println("cedula correscta");
-              
+              return cadena;
             } else {
               aux = false;
               System.out.println("cedula incorrecta");
@@ -97,37 +98,9 @@ public class Person{
         } else {
           System.out.println("cedula incorrecta");
         }
-    return idn;
+    return cadena;
       } 
     }
 
-        this.name = name;      
-        this.age = age;
-        this.idn = idn;
-        }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public int getIdn() {
-        return idn;
-    }
-
-    public void setIdn(int idn) {
-        this.idn = idn;
-    }
-        
-}
+   
