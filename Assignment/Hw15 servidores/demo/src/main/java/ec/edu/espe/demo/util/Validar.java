@@ -1,8 +1,7 @@
-import java.util.ArrayList;
-import java.util.Scanner;
+package ec.edu.espe.demo.util;
 
-import jdk.nashorn.internal.ir.ReturnNode;
-public class verificador{
+//import java.util.Scanner;
+public class Validar {
   
   private int ope1;
   private int ope2;
@@ -18,13 +17,14 @@ public class verificador{
   int respuesta =0;
   int contador=0;
   boolean aux = false;
-
+  String id;
   public String leer () {
-    System.out.println("Ingrese la cedula");
-    Scanner entrada = new Scanner(System.in);
-    String cadena = entrada.nextLine();
-    int numero = cadena.length();
-    String[] vector = cadena.split("");
+    //System.out.println("Ingrese la cedula");
+    //Scanner entrada = new Scanner(System.in);
+    //String id = entrada.nextLine();
+
+    int numero = id.length();
+    String[] vector = id.split("");
     int dig1 = Integer.parseInt(vector[0]);
     int dig2 = Integer.parseInt(vector[1]);
     int dig3 = Integer.parseInt(vector[2]);
@@ -76,17 +76,21 @@ public class verificador{
         suma = ope1 + ope2 + ope3 + ope4 + ope5 + ope6 + ope7 + ope8 + ope9;
         respuesta = suma%10;
         if  ((respuesta == digverificador) || (digverificador == 10 - respuesta)){
-          System.out.println("cedula correcta");
           aux = true;
+           
         }else{
-          System.out.println("cedula incorrecta");
+          aux = false;
+
         }
         }else{
-              System.out.println("cedula incorrecta");
-    }
-     return cadena;
-  } 
+          aux = false;
+            
+        }
+     
+  }
 }
+
+
   
 
 

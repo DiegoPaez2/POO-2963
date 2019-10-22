@@ -1,18 +1,18 @@
 package ec.edu.espe.demo.util;
 
-public class Person {
+public class Person{
+
     private String name;
     private int age;
-    private String dni;
-
-    public Person() {
+    private int id;
+    public Person(){
 
     }
 
-    public Person(String name, int age, String dni) {
+    public Person(String name, int age, int id){
         this.name = name;
         this.age = age;
-        this.dni = dni;
+        this.id = id; 
     }
 
     public String getName() {
@@ -31,12 +31,11 @@ public class Person {
         this.age = age;
     }
 
-    public String getDni() {
-        return dni;
+    public int getId() {
+        return id;
     }
 
-    public void setDni(String dni) {
-        this.dni = dni;
+    public void setId(int id) {
+        this.id = id;
     }
-
 }
