@@ -1,23 +1,31 @@
+import java.util.ArrayList;
+import java.util.Scanner;
 public class Person{
+
 
     private String name;
     private int age;
+    private String idn;
     private int ope1;
-  private int ope2;
-  private int ope3;
-  private int ope4;
-  private int ope5; 
-  private int ope6; 
-  private int ope7; 
-  private int ope8;
-  private int ope9;
-  
-  int suma=0;
-  int respuesta =0;
-  int contador=0;
-  boolean aux = false;
+    private int ope2;
+    private int ope3;
+    private int ope4;
+    private int ope5; 
+    private int ope6; 
+    private int ope7; 
+    private int ope8;
+    private int ope9;
     
+    int suma=0;
+    int respuesta =0;
+    int contador=0;
+    boolean aux = false;  
     public Person(String name, int age, int idn){
+
+        this.name = name;      
+        this.age = age;
+        this.idn = idn;
+            
     Scanner entrada = new Scanner(System.in);
     String idn = entrada.nextLine();
     int num = idn.length();
@@ -77,14 +85,14 @@ public class Person{
             if (respuesta == digverificador){
               aux = true;
               System.out.println("cedula correcta");
-              
+             
             }else{
               aux = false;
               System.out.println("cedula incorrecta");
             }
           }else{
             respuesta = 10 - respuesta;
-            if( respuesta == dig9){
+            if( respuesta == digverificador){
               aux = true;
               System.out.println("cedula correscta");
               
@@ -97,14 +105,11 @@ public class Person{
         } else {
           System.out.println("cedula incorrecta");
         }
-    return idn;
+    
       } 
-    }
+    
 
-        this.name = name;      
-        this.age = age;
-        this.idn = idn;
-        }
+    
 
     public String getName() {
         return name;

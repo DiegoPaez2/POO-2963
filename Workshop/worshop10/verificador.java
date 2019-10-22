@@ -21,8 +21,8 @@ public class verificador{
     System.out.println("Ingrese la cedula");
     Scanner entrada = new Scanner(System.in);
     String idn = entrada.nextLine();
-    int num = cadena.length();
-    String[] vector = cadena.split("");
+    int num = idn.length();
+    String[] vector = idn.split("");
     int dig1 = Integer.parseInt(vector[0]);
     int dig2 = Integer.parseInt(vector[1]);
     int dig3 = Integer.parseInt(vector[2]);
@@ -85,7 +85,7 @@ public class verificador{
             }
           }else{
             respuesta = 10 - respuesta;
-            if( respuesta == dig9){
+            if( respuesta == digverificador){
               aux = true;
               System.out.println("cedula correscta");
               return idn;
@@ -98,7 +98,7 @@ public class verificador{
         } else {
           System.out.println("cedula incorrecta");
         }
-    return idn;
+   ;
       } 
     }
 

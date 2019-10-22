@@ -1,5 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+
+import jdk.nashorn.internal.ir.ReturnNode;
 public class verificador{
   
   private int ope1;
@@ -17,11 +19,11 @@ public class verificador{
   int contador=0;
   boolean aux = false;
 
-  public String leer() {
+  public String leer () {
     System.out.println("Ingrese la cedula");
     Scanner entrada = new Scanner(System.in);
     String cadena = entrada.nextLine();
-    int num = cadena.length();
+    int numero = cadena.length();
     String[] vector = cadena.split("");
     int dig1 = Integer.parseInt(vector[0]);
     int dig2 = Integer.parseInt(vector[1]);
@@ -33,9 +35,10 @@ public class verificador{
     int dig8 = Integer.parseInt(vector[7]);
     int dig9 = Integer.parseInt(vector[8]);
     int digverificador = Integer.parseInt(vector[9]);
-    int numero = cadena.length();
     
-    if( numero == 10){
+    
+    
+      
           ope1 = dig1 *2;
           if (ope1 >= 10){
             ope1 = ope1 - 9; 
@@ -68,39 +71,29 @@ public class verificador{
           if (ope2 >= 9){
             ope8 = ope8-9;
           }
-          ope9 = dig2*2;
+          ope9 = dig9*2;
           if (ope9 >= 9){
             ope9 = ope9-9;
           }
-          suma = ope1 + ope2 + ope3 + ope4 + ope5 + ope6 + ope7 + ope8 + ope9;
-          respuesta = suma%10;
-          if (respuesta == 0){
-            if (respuesta == digverificador){
-              aux = true;
+          if( numero == 10){
+            suma = ope1 + ope2 + ope3 + ope4 + ope5 + ope6 + ope7 + ope8 + ope9;
+            respuesta = suma%10;
+            
+            
+            if  ((respuesta == digverificador) || (digverificador == 10 - respuesta)){
               System.out.println("cedula correcta");
-              return cadena;
-            }else{
-              aux = false;
-              System.out.println("cedula incorrecta");
-            }
-          }else{
-            respuesta = 10 - respuesta;
-            if( respuesta == dig9){
               aux = true;
-              System.out.println("cedula correscta");
-              return cadena;
-            } else {
-              aux = false;
+            }else{
               System.out.println("cedula incorrecta");
             }
-          }
-     
-        } else {
-          System.out.println("cedula incorrecta");
-        }
-    return cadena;
-      } 
+
+          }else{
+              System.out.println("cedula incorrecta");
     }
+     return cadena;
+  } 
+}
+  
 
 
    
