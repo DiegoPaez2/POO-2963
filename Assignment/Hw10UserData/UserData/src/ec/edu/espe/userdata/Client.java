@@ -6,7 +6,7 @@ public class Client {
         Scanner entrada = new Scanner(System.in);
         String name;
         String email;
-        int number;
+        int number
          
         System.out.println("Enter name");
         name = entrada.nexLine();
