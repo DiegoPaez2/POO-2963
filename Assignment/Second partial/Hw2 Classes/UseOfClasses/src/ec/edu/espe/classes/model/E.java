@@ -17,7 +17,7 @@ public class E {
     
     
     public void m (D d){
-        
+        System.out.println("en la clase E,habra el parametro D"+ D.class.getName);
     }
     
 }

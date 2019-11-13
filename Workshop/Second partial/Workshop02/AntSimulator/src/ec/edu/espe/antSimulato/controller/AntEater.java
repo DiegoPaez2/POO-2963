@@ -3,15 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ec.edu.espe.classes.model;
+package ec.edu.espe.antSimulato.controller;
 
 /**
  *
- * @author ASUS
+ * @author Labs-DCCO
  */
-public class B {
-     public String toString(){
-      return "";
-  }
+public class AntEater {
     
 }

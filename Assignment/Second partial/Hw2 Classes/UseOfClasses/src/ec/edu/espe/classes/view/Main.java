@@ -18,5 +18,7 @@ public class Main {
         A object1 = new A();
         A object2 = new A();
         A object3 = new A();
+        
+        System.out.println("method m of A");
     }
 }

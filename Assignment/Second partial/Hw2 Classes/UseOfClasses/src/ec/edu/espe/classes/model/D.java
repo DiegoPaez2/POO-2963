@@ -11,4 +11,8 @@ package ec.edu.espe.classes.model;
  */
 public class D {
     
+  public String toString(){
+      return "";
+  }
+    
 }
