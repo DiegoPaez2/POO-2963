@@ -18,6 +18,19 @@ public class TrustedFriend extends User {
     public TrustedFriend(String userName, String password, String fullName, String emailAddress, boolean isActive) {
         super(userName, password, fullName, emailAddress, isActive);
     }
+    public void viewTrustFrinds(){
+        String[] trustFriends = new String[6];
+        trustFriends[0]= "Alex";
+        trustFriends[1]="Nicole";
+        trustFriends[2]="Kevin";
+        trustFriends[3]="Alejandra";
+        trustFriends[4]="Carlos";
+        trustFriends[5]="Brayan";
+        System.out.println("\ttrust friend");
+        for(int i=0; i<5; i++){
+            System.out.println(trustFriends[i]);
+        }
+    }
     public void viewSharedAccountInformation(){
         
     }

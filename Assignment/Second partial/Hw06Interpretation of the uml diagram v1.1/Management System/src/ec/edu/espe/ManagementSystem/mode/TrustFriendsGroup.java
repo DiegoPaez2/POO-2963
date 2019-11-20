@@ -13,10 +13,32 @@ import java.util.ArrayList;
  */
 public class TrustFriendsGroup{
    protected String label;
-   private ArrayList<AccountOrNote> accountOrNote;
-   private ArrayList<TrustedFriend> trustFriend;        
+   private ArrayList<Account> account;
+   private ArrayList<Account> friends;
+   
+        
    
    public void viewAccountOrNote (){
-       System.out.println("muestra"+ accountOrNote);
+       String[] group1 = new String[5];
+       String[] group2 = new String[5];
+       
+       group1[0]="Alex";
+       group1[1]="Nicole";
+       group1[2]="Kevin";
+       group1[3]="Alexander";
+       group1[4]="Belen";
+       group2[0]="Alexandra";
+       group2[1]="Carlos";
+       group2[2]="Brayan";
+       group2[3]="Alenader";
+       group2[4]="Brayan";
+       System.out.println("\ttrust friend in group1");
+        for(int i=0; i<5; i++){
+            System.out.println(group1[i]);
+        }
+        System.out.println("\ttrust friend in group2");
+        for(int i=0; i<5; i++){
+            System.out.println(group2[i]);
+        }
    }
 }

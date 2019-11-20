@@ -5,10 +5,39 @@
  */
 package ec.edu.espe.ManagementSystem.view;
 
+import ec.edu.espe.ManagementSystem.mode.TrustFriendsGroup;
+import ec.edu.espe.ManagementSystem.mode.TrustedFriend;
+import java.util.ArrayList;
+import java.util.Scanner;
+
 /**
  *
  * @author ASUS
  */
 public class Main {
-    
+
+    public static void main(String[] args) {
+        // TODO code application logic here
+
+        Scanner scn = new Scanner(System.in);
+        String user;
+        int password;
+        System.out.println("Enter user");
+        user = scn.nextLine();
+        System.out.println("Enter password");
+        password = Integer.parseInt(scn.nextLine());
+        if ("dapaez2".equals(user) && password == 246813579){
+            System.out.println("\tYou accessed");
+            TrustFriendsGroup group = new TrustFriendsGroup();
+            group.viewAccountOrNote();
+            TrustedFriend trustFriend = new TrustedFriend(); 
+            trustFriend.viewTrustFrinds();
+        
+       } else {
+            System.out.println("Incorrect user or password");
+        }
+           
+       
+            
+    }
 }
