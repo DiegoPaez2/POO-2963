@@ -5,8 +5,8 @@
  */
 package ec.edu.espe.ManagementSystem.view;
 
-import ec.edu.espe.ManagementSystem.mode.TrustFriendsGroup;
-import ec.edu.espe.ManagementSystem.mode.TrustedFriend;
+import ec.edu.espe.ManagementSystem.model.TrustFriendsGroup;
+import ec.edu.espe.ManagementSystem.model.TrustedFriend;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -22,6 +22,9 @@ public class Main {
         Scanner scn = new Scanner(System.in);
         String user;
         int password;
+        
+        boolean exit = false;
+        while (!exit){
         System.out.println("Enter user");
         user = scn.nextLine();
         System.out.println("Enter password");
@@ -35,6 +38,7 @@ public class Main {
         
        } else {
             System.out.println("Incorrect user or password");
+        }
         }
            
        

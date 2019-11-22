@@ -41,9 +41,10 @@ public class Student {
     }
 
     public boolean aprovate(float nota1, float nota2 , float nota3) {
-        int nota;
+        double nota;
         nota = (int) ((nota2+ nota1+ nota3)/3);
         if (nota >= 14) {
+             System.out.println("nota final"+ nota);
             return true;
         } else {
             return false;
