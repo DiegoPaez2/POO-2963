@@ -50,14 +50,14 @@ public class DateLibrary {
      * @return  int that is the days
      */
 
-    public static int showDays(String date) {
+    public static String showDays(String date) {
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("dd/MM/yyyy");
         LocalDate fechaNac = LocalDate.parse(date, fmt);
         LocalDate ahora = LocalDate.now();
 
         Period periodo = Period.between(fechaNac, ahora);
-
-        return periodo.getDays();
+        String days =  periodo.getDays()+""; 
+        return days;
     }/**
      * This function shows the months
      * @param date is the birthday of the form "dd/MM/yyyy"

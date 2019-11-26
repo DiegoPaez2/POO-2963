@@ -72,7 +72,7 @@ public class DateLibraryTest {
         System.out.println("showDays");
         String date = "";
         int expResult = 0;
-        int result = DateLibrary.showDays(date);
+        String result = DateLibrary.showDays(date);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
