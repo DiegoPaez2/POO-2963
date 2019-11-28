@@ -29,7 +29,8 @@ public class DateLibraryTest {
     @Test
     public void testCheckIfBorn() {
         System.out.println("checkIfBorn");
-        String date = "09/11/2200";
+        String date;
+        date = "09/11/2999";
         boolean expResult = false;
         boolean result = DateLibrary.checkIfBorn(date);
         assertEquals(expResult, result);

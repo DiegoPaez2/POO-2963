@@ -75,6 +75,7 @@ public class DateLibrary {
     }
     /**
      * This function shows if you were born
+     * @param date
      * @paramdate is the birthday of the form "dd/MM/yyyy"
      * @return  a boolean
      */
@@ -91,10 +92,6 @@ public class DateLibrary {
 
         Calendar today = Calendar.getInstance();
         
-        if (year > today.get(Calendar.YEAR) && month > today.get(Calendar.MONTH) && day > today.get(Calendar.DAY_OF_MONTH)) {
-            return false;
-        } else {
-            return true;
-        }
+        return (year > today.get(Calendar.YEAR) && month > today.get(Calendar.MONTH) && day > today.get(Calendar.DAY_OF_MONTH));
     }
 }

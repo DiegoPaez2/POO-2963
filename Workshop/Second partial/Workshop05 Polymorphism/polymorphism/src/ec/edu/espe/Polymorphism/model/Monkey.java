@@ -12,11 +12,19 @@ package ec.edu.espe.Polymorphism.model;
 public class Monkey extends Mammal{
      
     private int tailLenght;
+   
 
-    public Monkey(int tailLenght, boolean isBreastFeeding, int id, String name, String gender, float weight, ec.edu.espe.Polymorphism.model.Cage cage) {
+    public Monkey(int tailLenght, boolean isBreastFeeding, int id, String name, String gender, float weight, Cage cage) {
+        
         super(isBreastFeeding, id, name, gender, weight, cage);
+        System.out.println("Monkey Construstor");
         this.tailLenght = tailLenght;
     }
+
+    
+ 
+
+  
 
     @Override
     public String toString() {

@@ -6,6 +6,7 @@
 package ec.edu.espe.AgeSystem.view;
 
 import ec.edu.espe.Date.DateLibrary;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -29,6 +30,7 @@ public class SystemAge extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -36,9 +38,14 @@ public class SystemAge extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         acceptjButton = new javax.swing.JButton();
         jTextDate = new javax.swing.JTextField();
-        jTextYear = new javax.swing.JTextField();
-        jTextMonth = new javax.swing.JTextField();
-        jTextDay = new javax.swing.JTextField();
+        txtYear = new javax.swing.JLabel();
+        txtMonths = new javax.swing.JLabel();
+        txtDay = new javax.swing.JLabel();
+        jLabYear = new javax.swing.JLabel();
+        jLabMonth = new javax.swing.JLabel();
+        jLabDay = new javax.swing.JLabel();
+
+        jLabel7.setText("jLabel7");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -60,18 +67,30 @@ public class SystemAge extends javax.swing.JFrame {
             }
         });
 
+        jTextDate.setToolTipText("enter (dd / MM / yyy) example (11/09/2019)");
         jTextDate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextDateActionPerformed(evt);
             }
         });
+        jTextDate.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jTextDateKeyTyped(evt);
+            }
+        });
+
+        jLabYear.setText("jLabel6");
+
+        jLabMonth.setText("jLabel8");
+
+        jLabDay.setText("jLabel9");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 188, Short.MAX_VALUE)
+                .addGap(0, 196, Short.MAX_VALUE)
                 .addComponent(jLabel1)
                 .addGap(177, 177, 177))
             .addGroup(layout.createSequentialGroup()
@@ -83,12 +102,21 @@ public class SystemAge extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5))
-                        .addGap(55, 55, 55)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextDate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextYear, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextMonth, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jTextDay, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(55, 55, 55)
+                                .addComponent(jTextDate, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(46, 46, 46)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(txtMonths)
+                                    .addComponent(txtYear)
+                                    .addComponent(txtDay))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabYear)
+                                    .addComponent(jLabMonth)
+                                    .addComponent(jLabDay)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(199, 199, 199)
                         .addComponent(acceptjButton)))
@@ -106,38 +134,76 @@ public class SystemAge extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(jTextYear, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtYear)
+                    .addComponent(jLabYear))
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jTextMonth, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(21, 21, 21)
+                    .addComponent(txtMonths)
+                    .addComponent(jLabMonth))
+                .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel5)
-                    .addComponent(jTextDay, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
+                    .addComponent(txtDay)
+                    .addComponent(jLabDay))
+                .addGap(30, 30, 30)
                 .addComponent(acceptjButton)
-                .addContainerGap(31, Short.MAX_VALUE))
+                .addContainerGap(40, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void acceptjButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptjButtonActionPerformed
-        int month = DateLibrary.showMonths(jTextDate.getText());
-        String months = month+"";
-        int year = DateLibrary.showYears(jTextDate.getText());
-        String years = year+"";
-        int day = DateLibrary.showDays(jTextDate.getText());
-        String days = day+"";
-        jTextDay.setText(days);
-        jTextYear.setText(years);
-        jTextMonth.setText(months);
+        
+        String[] parts = jTextDate.getText().split("/");
+        String enterdays = parts[0];
+        String entermonths = parts[1];
+        String enteryears = parts[2];
+        int userDay = Integer.parseInt(enterdays);
+        int userMonth = Integer.parseInt(entermonths);
+        int userYear = Integer.parseInt(enteryears);
+        if (userDay < 32 && userMonth < 13 && userYear > 0) {
+            
+            if(userYear<=2019){
+            int month = DateLibrary.showMonths(jTextDate.getText());
+            String months = month + "";
+            int year = DateLibrary.showYears(jTextDate.getText());
+            String years = year + "";
+            int day = DateLibrary.showDays(jTextDate.getText());
+            String days = day + "";
+            jLabDay.setText(days);
+            jLabYear.setText(years);
+            jLabMonth.setText(months);
+            }else{
+                 JOptionPane.showMessageDialog(null, "Not yet born", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        } 
+        if(userDay>32){
+            JOptionPane.showMessageDialog(null, "One month has no more than 32 days", "Error", JOptionPane.ERROR_MESSAGE);   
+        }
+        if(userMonth>12){
+            JOptionPane.showMessageDialog(null, "One year has no more than 12 months", "Error", JOptionPane.ERROR_MESSAGE);   
+        }if(userYear<0){
+            JOptionPane.showMessageDialog(null, "One may have negative years", "Error", JOptionPane.ERROR_MESSAGE);   
+        }
+
     }//GEN-LAST:event_acceptjButtonActionPerformed
 
     private void jTextDateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextDateActionPerformed
 
+
     }//GEN-LAST:event_jTextDateActionPerformed
+
+    private void jTextDateKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextDateKeyTyped
+        char validate = evt.getKeyChar();
+        if (Character.isLetter(validate)) {
+            getToolkit().beep();
+            evt.consume();
+            JOptionPane.showMessageDialog(null, "Enter numbers not letters \n-->example 5", "Error", JOptionPane.ERROR_MESSAGE);
+
+        }
+    }//GEN-LAST:event_jTextDateKeyTyped
 
     /**
      * @param args the command line arguments
@@ -168,23 +234,25 @@ public class SystemAge extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new SystemAge().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new SystemAge().setVisible(true);
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton acceptjButton;
+    private javax.swing.JLabel jLabDay;
+    private javax.swing.JLabel jLabMonth;
+    private javax.swing.JLabel jLabYear;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JTextField jTextDate;
-    private javax.swing.JTextField jTextDay;
-    private javax.swing.JTextField jTextMonth;
-    private javax.swing.JTextField jTextYear;
+    private javax.swing.JLabel txtDay;
+    private javax.swing.JLabel txtMonths;
+    private javax.swing.JLabel txtYear;
     // End of variables declaration//GEN-END:variables
 }

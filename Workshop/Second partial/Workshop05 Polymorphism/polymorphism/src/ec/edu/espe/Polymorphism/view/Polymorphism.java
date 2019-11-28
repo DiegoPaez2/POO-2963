@@ -19,7 +19,9 @@ public class Polymorphism {
     public static void main(String[] args) {
         Cage cage = new Cage(1,"wood",1,1);
         Animal animal = new Animal(1,"Pepito","Male",5, cage);
+        Animal animal2 = new Animal(1,"Pepito","Male",6, cage);
         System.out.println(animal);
+        System.out.println(animal2);
     }
     
 }
